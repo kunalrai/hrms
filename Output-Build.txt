@@ -1,0 +1,16 @@
+------ Build started: Project: eHRMS.Net, Configuration: Debug .NET ------
+
+Preparing resources...
+Updating references...
+The dependency 'BusinessLayer' could not be found.
+Warning: The dependency 'DAL, Version=1.0.2049.19439, Culture=neutral' in project 'eHRMS.Net' cannot be copied to the run directory because it would overwrite the reference 'DAL, Version=1.0.2082.31522, Culture=neutral'.
+Performing main compilation...
+Building satellite assemblies...
+
+
+
+---------------------- Done ----------------------
+
+    Build: 1 succeeded, 0 failed, 0 skipped
+
+

@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "eHRMS.Net", "eHRMS.Net.vbproj", "{E71A1330-56A5-497A-9292-B7438F5FBE16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E71A1330-56A5-497A-9292-B7438F5FBE16}.Debug|Default.ActiveCfg = Debug|.NET
+		{E71A1330-56A5-497A-9292-B7438F5FBE16}.Debug|Default.Build.0 = Debug|.NET
+		{E71A1330-56A5-497A-9292-B7438F5FBE16}.Release|Default.ActiveCfg = Release|.NET
+		{E71A1330-56A5-497A-9292-B7438F5FBE16}.Release|Default.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

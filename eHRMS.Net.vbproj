@@ -1,0 +1,1578 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E71A1330-56A5-497A-9292-B7438F5FBE16}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>eHRMS.Net</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>eHRMS.Net</RootNamespace>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Windows</MyType>
+    <UpgradeBackupLocation />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>eHRMS.Net.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>eHRMS.Net.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{EF53050B-882E-4776-B643-EDA472E8E3F2}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <Reference Include="Ajax">
+      <Name>Ajax</Name>
+      <HintPath>bin\Ajax.dll</HintPath>
+    </Reference>
+    <Reference Include="BAL">
+      <Name>BAL</Name>
+      <HintPath>bin\BAL.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine">
+      <Name>CrystalDecisions.CrystalReports.Engine</Name>
+      <HintPath>C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource">
+      <Name>CrystalDecisions.ReportSource</Name>
+      <HintPath>C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalDecisions.ReportSource.dll</HintPath>
+      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared">
+      <Name>CrystalDecisions.Shared</Name>
+      <HintPath>C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalDecisions.Shared.dll</HintPath>
+      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web">
+      <Name>CrystalDecisions.Web</Name>
+      <HintPath>F:\Program Files\Common Files\Crystal Decisions\2.0\managed\CrystalDecisions.Web.dll</HintPath>
+      <AssemblyFolderKey>hklm\dn\crystal.net</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms">
+      <Name>CrystalDecisions.Windows.Forms</Name>
+      <HintPath>C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalDecisions.Windows.Forms.dll</HintPath>
+      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="CrystalEnterpriseLib">
+      <Name>CrystalEnterpriseLib</Name>
+      <HintPath>C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalEnterpriseLib.dll</HintPath>
+      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="CrystalInfoStoreLib">
+      <Name>CrystalInfoStoreLib</Name>
+      <HintPath>C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalInfoStoreLib.dll</HintPath>
+      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="CrystalKeyCodeLib">
+      <Name>CrystalKeyCodeLib</Name>
+      <HintPath>C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalKeyCodeLib.dll</HintPath>
+      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="CrystalReportPluginLib">
+      <Name>CrystalReportPluginLib</Name>
+      <HintPath>C:\Program Files\Common Files\Crystal Decisions\1.1\Managed\CrystalReportPluginLib.dll</HintPath>
+      <AssemblyFolderKey>hklm\crystal.net</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="DAL">
+      <Name>DAL</Name>
+      <HintPath>bin\DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="DITWebLibrary">
+      <Name>ditweblibrary</Name>
+      <HintPath>..\..\divergentinfosofttechnologies\helpdesk\bin\ditweblibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.FoxServer">
+      <Name>Interop.FoxServer</Name>
+      <HintPath>bin\Interop.FoxServer.dll</HintPath>
+    </Reference>
+    <Reference Include="jscripteval">
+      <Name>jscripteval</Name>
+      <HintPath>bin\jscripteval.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.JScript">
+      <Name>Microsoft.JScript</Name>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="Microsoft.Web.UI.WebControls">
+      <Name>microsoft.web.ui.webcontrols</Name>
+      <HintPath>bin\microsoft.web.ui.webcontrols.dll</HintPath>
+    </Reference>
+    <Reference Include="SCM">
+      <Name>SCM</Name>
+      <HintPath>D:\Suraj\SEMS\SCM.NET\SCM\bin\SCM.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.OracleClient">
+      <Name>System.Data.OracleClient</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Name>System.EnterpriseServices</Name>
+    </Reference>
+    <Reference Include="System.Management">
+      <Name>System.Management</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.HtmlControls" />
+    <Import Include="System.Web.UI.WebControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdjustmentNew.aspx.designer.vb">
+      <DependentUpon>AdjustmentNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdjustmentNew.aspx.vb">
+      <DependentUpon>AdjustmentNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttendanceStatus.aspx.designer.vb">
+      <DependentUpon>AttendanceStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendanceStatus.aspx.vb">
+      <DependentUpon>AttendanceStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendenceUpload.aspx.designer.vb">
+      <DependentUpon>AttendenceUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AttendenceUpload.aspx.vb">
+      <DependentUpon>AttendenceUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BalanceUpdation.aspx.designer.vb">
+      <DependentUpon>BalanceUpdation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BalanceUpdation.aspx.vb">
+      <DependentUpon>BalanceUpdation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blank.aspx.designer.vb">
+      <DependentUpon>Blank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blank.aspx.vb">
+      <DependentUpon>Blank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Company_Setup.aspx.designer.vb">
+      <DependentUpon>Company_Setup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Company_Setup.aspx.vb">
+      <DependentUpon>Company_Setup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compensation.aspx.designer.vb">
+      <DependentUpon>Compensation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compensation.aspx.vb">
+      <DependentUpon>Compensation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompLeavEntry.aspx.designer.vb">
+      <DependentUpon>CompLeavEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CompLeavEntry.aspx.vb">
+      <DependentUpon>CompLeavEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompSel.aspx.designer.vb">
+      <DependentUpon>CompSel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CompSel.aspx.vb">
+      <DependentUpon>CompSel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompSelection.aspx.designer.vb">
+      <DependentUpon>CompSelection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CompSelection.aspx.vb">
+      <DependentUpon>CompSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateUser.aspx.designer.vb">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateUser.aspx.vb">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CTCWrkSheet.aspx.designer.vb">
+      <DependentUpon>CTCWrkSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CTCWrkSheet.aspx.vb">
+      <DependentUpon>CTCWrkSheet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DesignationMast.aspx.designer.vb">
+      <DependentUpon>DesignationMast.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DesignationMast.aspx.vb">
+      <DependentUpon>DesignationMast.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EMail.aspx.designer.vb">
+      <DependentUpon>EMail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EMail.aspx.vb">
+      <DependentUpon>EMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpExplorer.aspx.designer.vb">
+      <DependentUpon>EmpExplorer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpExplorer.aspx.vb">
+      <DependentUpon>EmpExplorer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpLeavStatus.aspx.designer.vb">
+      <DependentUpon>EmpLeavStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpLeavStatus.aspx.vb">
+      <DependentUpon>EmpLeavStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpMast.aspx.designer.vb">
+      <DependentUpon>EmpMast.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpMast.aspx.vb">
+      <DependentUpon>EmpMast.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpNominees.aspx.designer.vb">
+      <DependentUpon>EmpNominees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpNominees.aspx.vb">
+      <DependentUpon>EmpNominees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpSkills.aspx.designer.vb">
+      <DependentUpon>EmpSkills.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpSkills.aspx.vb">
+      <DependentUpon>EmpSkills.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpStatus.aspx.designer.vb">
+      <DependentUpon>EmpStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpStatus.aspx.vb">
+      <DependentUpon>EmpStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmpStatusDetail.aspx.designer.vb">
+      <DependentUpon>EmpStatusDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmpStatusDetail.aspx.vb">
+      <DependentUpon>EmpStatusDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Family.aspx.designer.vb">
+      <DependentUpon>Family.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Family.aspx.vb">
+      <DependentUpon>Family.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileSetup.aspx.designer.vb">
+      <DependentUpon>FileSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileSetup.aspx.vb">
+      <DependentUpon>FileSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileUpload.aspx.designer.vb">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileUpload.aspx.vb">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinalSettlement.aspx.designer.vb">
+      <DependentUpon>FinalSettlement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinalSettlement.aspx.vb">
+      <DependentUpon>FinalSettlement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormulaSetup.aspx.designer.vb">
+      <DependentUpon>FormulaSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormulaSetup.aspx.vb">
+      <DependentUpon>FormulaSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmESIChallan.aspx.designer.vb">
+      <DependentUpon>FrmESIChallan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmESIChallan.aspx.vb">
+      <DependentUpon>FrmESIChallan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmHTMLReports.aspx.designer.vb">
+      <DependentUpon>frmHTMLReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmHTMLReports.aspx.vb">
+      <DependentUpon>frmHTMLReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmLoanPayment.aspx.designer.vb">
+      <DependentUpon>FrmLoanPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoanPayment.aspx.vb">
+      <DependentUpon>FrmLoanPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmPFChallanNew.aspx.designer.vb">
+      <DependentUpon>FrmPFChallanNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPFChallanNew.aspx.vb">
+      <DependentUpon>FrmPFChallanNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmReports.aspx.designer.vb">
+      <DependentUpon>FrmReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReports.aspx.vb">
+      <DependentUpon>FrmReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmTdsChallan.aspx.designer.vb">
+      <DependentUpon>FrmTdsChallan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTdsChallan.aspx.vb">
+      <DependentUpon>FrmTdsChallan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeneralInfo.aspx.designer.vb">
+      <DependentUpon>GeneralInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneralInfo.aspx.vb">
+      <DependentUpon>GeneralInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GenMast.aspx.designer.vb">
+      <DependentUpon>GenMast.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GenMast.aspx.vb">
+      <DependentUpon>GenMast.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="History.aspx.designer.vb">
+      <DependentUpon>History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="History.aspx.vb">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Import.aspx.designer.vb">
+      <DependentUpon>Import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Import.aspx.vb">
+      <DependentUpon>Import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportFile.aspx.designer.vb">
+      <DependentUpon>ImportFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportFile.aspx.vb">
+      <DependentUpon>ImportFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportOutput.aspx.designer.vb">
+      <DependentUpon>ImportOutput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportOutput.aspx.vb">
+      <DependentUpon>ImportOutput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IncTransfer.aspx.designer.vb">
+      <DependentUpon>IncTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IncTransfer.aspx.vb">
+      <DependentUpon>IncTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IntrvAssessment.aspx.designer.vb">
+      <DependentUpon>IntrvAssessment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IntrvAssessment.aspx.vb">
+      <DependentUpon>IntrvAssessment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IntrvSchedule.aspx.designer.vb">
+      <DependentUpon>IntrvSchedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IntrvSchedule.aspx.vb">
+      <DependentUpon>IntrvSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JobRequisition.aspx.designer.vb">
+      <DependentUpon>JobRequisition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JobRequisition.aspx.vb">
+      <DependentUpon>JobRequisition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Joining.aspx.designer.vb">
+      <DependentUpon>Joining.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Joining.aspx.vb">
+      <DependentUpon>Joining.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeavBalance.aspx.designer.vb">
+      <DependentUpon>LeavBalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeavBalance.aspx.vb">
+      <DependentUpon>LeavBalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeaveApplication.aspx.designer.vb">
+      <DependentUpon>LeaveApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveApplication.aspx.vb">
+      <DependentUpon>LeaveApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeaveCredit.aspx.designer.vb">
+      <DependentUpon>LeaveCredit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveCredit.aspx.vb">
+      <DependentUpon>LeaveCredit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeavEncash.aspx.designer.vb">
+      <DependentUpon>LeavEncash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeavEncash.aspx.vb">
+      <DependentUpon>LeavEncash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeavEntry.aspx.designer.vb">
+      <DependentUpon>LeavEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeavEntry.aspx.vb">
+      <DependentUpon>LeavEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeaveStatus.aspx.designer.vb">
+      <DependentUpon>LeaveStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveStatus.aspx.vb">
+      <DependentUpon>LeaveStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeaveYear.aspx.designer.vb">
+      <DependentUpon>LeaveYear.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveYear.aspx.vb">
+      <DependentUpon>LeaveYear.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeavSanction.aspx.designer.vb">
+      <DependentUpon>LeavSanction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeavSanction.aspx.vb">
+      <DependentUpon>LeavSanction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LeavSetup.aspx.designer.vb">
+      <DependentUpon>LeavSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LeavSetup.aspx.vb">
+      <DependentUpon>LeavSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoanRecovery.aspx.designer.vb">
+      <DependentUpon>LoanRecovery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoanRecovery.aspx.vb">
+      <DependentUpon>LoanRecovery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LocMast.aspx.designer.vb">
+      <DependentUpon>LocMast.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LocMast.aspx.vb">
+      <DependentUpon>LocMast.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logo.aspx.designer.vb">
+      <DependentUpon>Logo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logo.aspx.vb">
+      <DependentUpon>Logo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogOut.aspx.designer.vb">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogOut.aspx.vb">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailFeedback.aspx.designer.vb">
+      <DependentUpon>MailFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MailFeedback.aspx.vb">
+      <DependentUpon>MailFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.vb">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.aspx.vb">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Masters.aspx.designer.vb">
+      <DependentUpon>Masters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Masters.aspx.vb">
+      <DependentUpon>Masters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MdlHRMS.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MenuBars.aspx.vb">
+      <DependentUpon>MenuBars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menus.aspx.designer.vb">
+      <DependentUpon>Menus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menus.aspx.vb">
+      <DependentUpon>Menus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MonthEndProcess.aspx.designer.vb">
+      <DependentUpon>MonthEndProcess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MonthEndProcess.aspx.vb">
+      <DependentUpon>MonthEndProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MonthOpen.aspx.designer.vb">
+      <DependentUpon>MonthOpen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MonthOpen.aspx.vb">
+      <DependentUpon>MonthOpen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ntrvAssessment.aspx.vb">
+      <DependentUpon>IntrvAssessment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OffInfo.aspx.designer.vb">
+      <DependentUpon>OffInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OffInfo.aspx.vb">
+      <DependentUpon>OffInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ORGCHART.aspx.designer.vb">
+      <DependentUpon>ORGCHART.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ORGCHART.aspx.vb">
+      <DependentUpon>ORGCHART.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Others.aspx.designer.vb">
+      <DependentUpon>Others.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Others.aspx.vb">
+      <DependentUpon>Others.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Overtime.aspx.designer.vb">
+      <DependentUpon>Overtime.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Overtime.aspx.vb">
+      <DependentUpon>Overtime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageFooter.aspx.designer.vb">
+      <DependentUpon>PageFooter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageFooter.aspx.vb">
+      <DependentUpon>PageFooter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PasswordChange.aspx.designer.vb">
+      <DependentUpon>PasswordChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordChange.aspx.vb">
+      <DependentUpon>PasswordChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayBill.aspx.designer.vb">
+      <DependentUpon>PayBill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayBill.aspx.vb">
+      <DependentUpon>PayBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayCal.aspx.designer.vb">
+      <DependentUpon>PayCal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayCal.aspx.vb">
+      <DependentUpon>PayCal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayCal.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PaySetup.aspx.designer.vb">
+      <DependentUpon>PaySetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaySetup.aspx.vb">
+      <DependentUpon>PaySetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Policies.aspx.designer.vb">
+      <DependentUpon>Policies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Policies.aspx.vb">
+      <DependentUpon>Policies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProgressBar.aspx.designer.vb">
+      <DependentUpon>ProgressBar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressBar.aspx.vb">
+      <DependentUpon>ProgressBar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Progression.aspx.designer.vb">
+      <DependentUpon>Progression.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Progression.aspx.vb">
+      <DependentUpon>Progression.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Promotion.aspx.designer.vb">
+      <DependentUpon>Promotion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Promotion.aspx.vb">
+      <DependentUpon>Promotion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rajeev.aspx.designer.vb">
+      <DependentUpon>Rajeev.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rajeev.aspx.vb">
+      <DependentUpon>Rajeev.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RajTest.aspx.designer.vb">
+      <DependentUpon>RajTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RajTest.aspx.vb">
+      <DependentUpon>RajTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecoveryDetails.aspx.designer.vb">
+      <DependentUpon>RecoveryDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecoveryDetails.aspx.vb">
+      <DependentUpon>RecoveryDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReimbursementPayment.aspx.designer.vb">
+      <DependentUpon>ReimbursementPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReimbursementPayment.aspx.vb">
+      <DependentUpon>ReimbursementPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reminders.aspx.designer.vb">
+      <DependentUpon>Reminders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reminders.aspx.vb">
+      <DependentUpon>Reminders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RepChnl.aspx.designer.vb">
+      <DependentUpon>RepChnl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepChnl.aspx.vb">
+      <DependentUpon>RepChnl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportProperties.aspx.designer.vb">
+      <DependentUpon>ReportProperties.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportProperties.aspx.vb">
+      <DependentUpon>ReportProperties.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportView.aspx.designer.vb">
+      <DependentUpon>ReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportView.aspx.vb">
+      <DependentUpon>ReportView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportWizard.aspx.designer.vb">
+      <DependentUpon>ReportWizard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportWizard.aspx.vb">
+      <DependentUpon>ReportWizard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResApproval.aspx.designer.vb">
+      <DependentUpon>ResApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResApproval.aspx.vb">
+      <DependentUpon>ResApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResumeMast.aspx.designer.vb">
+      <DependentUpon>ResumeMast.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResumeMast.aspx.vb">
+      <DependentUpon>ResumeMast.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResumeSearch.aspx.designer.vb">
+      <DependentUpon>ResumeSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResumeSearch.aspx.vb">
+      <DependentUpon>ResumeSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResumeSearchResult.aspx.designer.vb">
+      <DependentUpon>ResumeSearchResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResumeSearchResult.aspx.vb">
+      <DependentUpon>ResumeSearchResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResumeStatus.aspx.designer.vb">
+      <DependentUpon>ResumeStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResumeStatus.aspx.vb">
+      <DependentUpon>ResumeStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RunSQL.aspx.designer.vb">
+      <DependentUpon>RunSQL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RunSQL.aspx.vb">
+      <DependentUpon>RunSQL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RunSQLCommand.aspx.designer.vb">
+      <DependentUpon>RunSQLCommand.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RunSQLCommand.aspx.vb">
+      <DependentUpon>RunSQLCommand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.vb">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.vb">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SectionMast.aspx.designer.vb">
+      <DependentUpon>SectionMast.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SectionMast.aspx.vb">
+      <DependentUpon>SectionMast.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShiftAllocation.aspx.designer.vb">
+      <DependentUpon>ShiftAllocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShiftAllocation.aspx.vb">
+      <DependentUpon>ShiftAllocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShiftMast.aspx.designer.vb">
+      <DependentUpon>ShiftMast.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShiftMast.aspx.vb">
+      <DependentUpon>ShiftMast.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SKillMast.aspx.designer.vb">
+      <DependentUpon>SKillMast.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SKillMast.aspx.vb">
+      <DependentUpon>SKillMast.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StateMast.aspx.designer.vb">
+      <DependentUpon>StateMast.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StateMast.aspx.vb">
+      <DependentUpon>StateMast.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestEntry.aspx.designer.vb">
+      <DependentUpon>TestEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestEntry.aspx.vb">
+      <DependentUpon>TestEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestForm.aspx.designer.vb">
+      <DependentUpon>TestForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestForm.aspx.vb">
+      <DependentUpon>TestForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestMast.aspx.designer.vb">
+      <DependentUpon>TestMast.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestMast.aspx.vb">
+      <DependentUpon>TestMast.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrainCalExplorer.aspx.designer.vb">
+      <DependentUpon>TrainCalExplorer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrainCalExplorer.aspx.vb">
+      <DependentUpon>TrainCalExplorer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrainEmpFeedback.aspx.designer.vb">
+      <DependentUpon>TrainEmpFeedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrainEmpFeedback.aspx.vb">
+      <DependentUpon>TrainEmpFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrainerMast.aspx.designer.vb">
+      <DependentUpon>TrainerMast.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrainerMast.aspx.vb">
+      <DependentUpon>TrainerMast.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrainingCalender.aspx.designer.vb">
+      <DependentUpon>TrainingCalender.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrainingCalender.aspx.vb">
+      <DependentUpon>TrainingCalender.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrainingMast.aspx.designer.vb">
+      <DependentUpon>TrainingMast.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrainingMast.aspx.vb">
+      <DependentUpon>TrainingMast.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrainingNeeds.aspx.designer.vb">
+      <DependentUpon>TrainingNeeds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrainingNeeds.aspx.vb">
+      <DependentUpon>TrainingNeeds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrainingRequest.aspx.designer.vb">
+      <DependentUpon>TrainingRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrainingRequest.aspx.vb">
+      <DependentUpon>TrainingRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TreeMenu.aspx.designer.vb">
+      <DependentUpon>TreeMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TreeMenu.aspx.vb">
+      <DependentUpon>TreeMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TrfUtility.aspx.designer.vb">
+      <DependentUpon>TrfUtility.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TrfUtility.aspx.vb">
+      <DependentUpon>TrfUtility.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateMngrs.aspx.designer.vb">
+      <DependentUpon>UpdateMngrs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateMngrs.aspx.vb">
+      <DependentUpon>UpdateMngrs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UploadImage.aspx.designer.vb">
+      <DependentUpon>UploadImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UploadImage.aspx.vb">
+      <DependentUpon>UploadImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.vb">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm11.aspx.designer.vb">
+      <DependentUpon>WebForm11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm11.aspx.vb">
+      <DependentUpon>WebForm11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.vb">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.vb">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm5.aspx.designer.vb">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm5.aspx.vb">
+      <DependentUpon>WebForm5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkHistEntry.aspx.designer.vb">
+      <DependentUpon>WorkHistEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkHistEntry.aspx.vb">
+      <DependentUpon>WorkHistEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkInProgress.aspx.designer.vb">
+      <DependentUpon>WorkInProgress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkInProgress.aspx.vb">
+      <DependentUpon>WorkInProgress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Content Include="AdjustmentNew.aspx" />
+    <Content Include="AttendanceStatus.aspx" />
+    <Content Include="AttendenceUpload.aspx" />
+    <Content Include="BalanceUpdation.aspx" />
+    <Content Include="Blank.aspx" />
+    <Content Include="Common.js" />
+    <Content Include="Company_Setup.aspx" />
+    <Content Include="Compensation.aspx" />
+    <Content Include="CompLeavEntry.aspx" />
+    <Content Include="CompSel.aspx" />
+    <Content Include="CompSelection.aspx" />
+    <Content Include="coolmenus4.js" />
+    <Content Include="CreateUser.aspx" />
+    <Content Include="CTCWrkSheet.aspx" />
+    <Content Include="DesignationMast.aspx" />
+    <Content Include="EMail.aspx" />
+    <Content Include="EmpExplorer.aspx" />
+    <Content Include="EmpLeavStatus.aspx" />
+    <Content Include="EmpMast.aspx" />
+    <Content Include="EmpNominees.aspx" />
+    <Content Include="EmpSkills.aspx" />
+    <Content Include="EmpStatus.aspx" />
+    <Content Include="EmpStatusDetail.aspx" />
+    <Content Include="Error.htm" />
+    <Content Include="Family.aspx" />
+    <Content Include="FileSetup.aspx" />
+    <Content Include="FileUpload.aspx" />
+    <Content Include="FinalSettlement.aspx" />
+    <Content Include="FormulaSetup.aspx" />
+    <Content Include="FrmESIChallan.aspx" />
+    <Content Include="frmHTMLReports.aspx" />
+    <Content Include="FrmLoanPayment.aspx" />
+    <Content Include="FrmPFChallanNew.aspx" />
+    <Content Include="FrmReports.aspx" />
+    <Content Include="FrmTdsChallan.aspx" />
+    <Content Include="GeneralInfo.aspx" />
+    <Content Include="GenMast.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="HCStyles.css" />
+    <Content Include="History.aspx" />
+    <Content Include="Home.htm" />
+    <Content Include="Home1.htm" />
+    <Content Include="Home2.htm" />
+    <Content Include="Import.aspx" />
+    <Content Include="ImportFile.aspx" />
+    <Content Include="ImportOutput.aspx" />
+    <Content Include="IncTransfer.aspx" />
+    <Content Include="IntrvAssessment.aspx" />
+    <Content Include="IntrvSchedule.aspx" />
+    <Content Include="JobRequisition.aspx" />
+    <Content Include="Joining.aspx" />
+    <Content Include="LeavBalance.aspx" />
+    <Content Include="LeaveApplication.aspx" />
+    <Content Include="LeaveCredit.aspx" />
+    <Content Include="LeavEncash.aspx" />
+    <Content Include="LeavEntry.aspx" />
+    <Content Include="LeaveStatus.aspx" />
+    <Content Include="LeaveYear.aspx" />
+    <Content Include="LeavSanction.aspx" />
+    <Content Include="LeavSetup.aspx" />
+    <Content Include="LoanRecovery.aspx" />
+    <Content Include="LocMast.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logo.aspx" />
+    <Content Include="LogOut.aspx" />
+    <Content Include="MailFeedback.aspx" />
+    <Content Include="Main.aspx" />
+    <Content Include="Masters.aspx" />
+    <Content Include="MenuBars.aspx" />
+    <Content Include="Menus.aspx" />
+    <Content Include="MonthEndProcess.aspx" />
+    <Content Include="MonthOpen.aspx" />
+    <Content Include="OffInfo.aspx" />
+    <Content Include="ORGCHART.aspx" />
+    <Content Include="Others.aspx" />
+    <Content Include="Overtime.aspx" />
+    <Content Include="PageFooter.aspx" />
+    <Content Include="PasswordChange.aspx" />
+    <Content Include="PayBill.aspx" />
+    <Content Include="PayCal.aspx" />
+    <Content Include="PaySetup.aspx" />
+    <Content Include="Policies.aspx" />
+    <Content Include="ProgressBar.aspx" />
+    <Content Include="Progression.aspx" />
+    <Content Include="Promotion.aspx" />
+    <Content Include="Rajeev.aspx" />
+    <Content Include="RajTest.aspx" />
+    <Content Include="RecoveryDetails.aspx" />
+    <Content Include="ReimbursementPayment.aspx" />
+    <Content Include="Reminders.aspx" />
+    <Content Include="RepChnl.aspx" />
+    <Content Include="ReportProperties.aspx" />
+    <Content Include="ReportView.aspx" />
+    <Content Include="ReportWizard.aspx" />
+    <Content Include="ResApproval.aspx" />
+    <Content Include="ResumeMast.aspx" />
+    <Content Include="ResumeSearch.aspx" />
+    <Content Include="ResumeSearchResult.aspx" />
+    <Content Include="ResumeStatus.aspx" />
+    <Content Include="RunSQL.aspx" />
+    <Content Include="RunSQLCommand.aspx" />
+    <Content Include="Search.aspx" />
+    <Content Include="SectionMast.aspx" />
+    <Content Include="ShiftAllocation.aspx" />
+    <Content Include="ShiftMast.aspx" />
+    <Content Include="SKillMast.aspx" />
+    <Content Include="StateMast.aspx" />
+    <Content Include="Styles.css" />
+    <Content Include="TestEntry.aspx" />
+    <Content Include="TestForm.aspx" />
+    <Content Include="TestMast.aspx" />
+    <Content Include="TrainCalExplorer.aspx" />
+    <Content Include="TrainEmpFeedback.aspx" />
+    <Content Include="TrainerMast.aspx" />
+    <Content Include="TrainingCalender.aspx" />
+    <Content Include="TrainingMast.aspx" />
+    <Content Include="TrainingNeeds.aspx" />
+    <Content Include="TrainingRequest.aspx" />
+    <Content Include="TreeMenu.aspx" />
+    <Content Include="TrfUtility.aspx" />
+    <Content Include="UpdateMngrs.aspx" />
+    <Content Include="UploadImage.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm11.aspx" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="WebForm5.aspx" />
+    <Content Include="WorkHistEntry.aspx" />
+    <Content Include="WorkInProgress.aspx" />
+    <EmbeddedResource Include="AdjustmentNew.aspx.resx">
+      <DependentUpon>AdjustmentNew.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceStatus.aspx.resx">
+      <DependentUpon>AttendanceStatus.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendenceUpload.aspx.resx">
+      <DependentUpon>AttendenceUpload.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BalanceUpdation.aspx.resx">
+      <DependentUpon>BalanceUpdation.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blank.aspx.resx">
+      <DependentUpon>Blank.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Company_Setup.aspx.resx">
+      <DependentUpon>Company_Setup.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compensation.aspx.resx">
+      <DependentUpon>Compensation.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompLeavEntry.aspx.resx">
+      <DependentUpon>CompLeavEntry.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompSel.aspx.resx">
+      <DependentUpon>CompSel.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompSelection.aspx.resx">
+      <DependentUpon>CompSelection.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateUser.aspx.resx">
+      <DependentUpon>CreateUser.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CTCWrkSheet.aspx.resx">
+      <DependentUpon>CTCWrkSheet.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DesignationMast.aspx.resx">
+      <DependentUpon>DesignationMast.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMail.aspx.resx">
+      <DependentUpon>EMail.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpExplorer.aspx.resx">
+      <DependentUpon>EmpExplorer.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpLeavStatus.aspx.resx">
+      <DependentUpon>EmpLeavStatus.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpMast.aspx.resx">
+      <DependentUpon>EmpMast.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpNominees.aspx.resx">
+      <DependentUpon>EmpNominees.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpSkills.aspx.resx">
+      <DependentUpon>EmpSkills.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpStatus.aspx.resx">
+      <DependentUpon>EmpStatus.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmpStatusDetail.aspx.resx">
+      <DependentUpon>EmpStatusDetail.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Family.aspx.resx">
+      <DependentUpon>Family.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileSetup.aspx.resx">
+      <DependentUpon>FileSetup.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileUpload.aspx.resx">
+      <DependentUpon>FileUpload.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalSettlement.aspx.resx">
+      <DependentUpon>FinalSettlement.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulaSetup.aspx.resx">
+      <DependentUpon>FormulaSetup.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmESIChallan.aspx.resx">
+      <DependentUpon>FrmESIChallan.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHTMLReports.aspx.resx">
+      <DependentUpon>frmHTMLReports.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoanPayment.aspx.resx">
+      <DependentUpon>FrmLoanPayment.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPFChallanNew.aspx.resx">
+      <DependentUpon>FrmPFChallanNew.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReports.aspx.resx">
+      <DependentUpon>FrmReports.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTdsChallan.aspx.resx">
+      <DependentUpon>FrmTdsChallan.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralInfo.aspx.resx">
+      <DependentUpon>GeneralInfo.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenMast.aspx.resx">
+      <DependentUpon>GenMast.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History.aspx.resx">
+      <DependentUpon>History.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Import.aspx.resx">
+      <DependentUpon>Import.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportFile.aspx.resx">
+      <DependentUpon>ImportFile.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportOutput.aspx.resx">
+      <DependentUpon>ImportOutput.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncTransfer.aspx.resx">
+      <DependentUpon>IncTransfer.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntrvAssessment.aspx.resx">
+      <DependentUpon>IntrvAssessment.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntrvSchedule.aspx.resx">
+      <DependentUpon>IntrvSchedule.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobRequisition.aspx.resx">
+      <DependentUpon>JobRequisition.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Joining.aspx.resx">
+      <DependentUpon>Joining.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeavBalance.aspx.resx">
+      <DependentUpon>LeavBalance.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveApplication.aspx.resx">
+      <DependentUpon>LeaveApplication.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveCredit.aspx.resx">
+      <DependentUpon>LeaveCredit.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeavEncash.aspx.resx">
+      <DependentUpon>LeavEncash.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeavEntry.aspx.resx">
+      <DependentUpon>LeavEntry.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveStatus.aspx.resx">
+      <DependentUpon>LeaveStatus.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveYear.aspx.resx">
+      <DependentUpon>LeaveYear.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeavSanction.aspx.resx">
+      <DependentUpon>LeavSanction.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeavSetup.aspx.resx">
+      <DependentUpon>LeavSetup.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoanRecovery.aspx.resx">
+      <DependentUpon>LoanRecovery.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocMast.aspx.resx">
+      <DependentUpon>LocMast.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.aspx.resx">
+      <DependentUpon>Login.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logo.aspx.resx">
+      <DependentUpon>Logo.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogOut.aspx.resx">
+      <DependentUpon>LogOut.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailFeedback.aspx.resx">
+      <DependentUpon>MailFeedback.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.aspx.resx">
+      <DependentUpon>Main.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters.aspx.resx">
+      <DependentUpon>Masters.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBars.aspx.resx">
+      <DependentUpon>MenuBars.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus.aspx.resx">
+      <DependentUpon>Menus.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonthEndProcess.aspx.resx">
+      <DependentUpon>MonthEndProcess.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonthOpen.aspx.resx">
+      <DependentUpon>MonthOpen.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ntrvAssessment.aspx.resx">
+      <DependentUpon>ntrvAssessment.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OffInfo.aspx.resx">
+      <DependentUpon>OffInfo.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ORGCHART.aspx.resx">
+      <DependentUpon>ORGCHART.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Others.aspx.resx">
+      <DependentUpon>Others.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Overtime.aspx.resx">
+      <DependentUpon>Overtime.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageFooter.aspx.resx">
+      <DependentUpon>PageFooter.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordChange.aspx.resx">
+      <DependentUpon>PasswordChange.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayBill.aspx.resx">
+      <DependentUpon>PayBill.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayCal.aspx.resx">
+      <DependentUpon>PayCal.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaySetup.aspx.resx">
+      <DependentUpon>PaySetup.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Policies.aspx.resx">
+      <DependentUpon>Policies.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressBar.aspx.resx">
+      <DependentUpon>ProgressBar.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Progression.aspx.resx">
+      <DependentUpon>Progression.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Promotion.aspx.resx">
+      <DependentUpon>Promotion.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rajeev.aspx.resx">
+      <DependentUpon>Rajeev.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RajTest.aspx.resx">
+      <DependentUpon>RajTest.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecoveryDetails.aspx.resx">
+      <DependentUpon>RecoveryDetails.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReimbursementPayment.aspx.resx">
+      <DependentUpon>ReimbursementPayment.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reminders.aspx.resx">
+      <DependentUpon>Reminders.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepChnl.aspx.resx">
+      <DependentUpon>RepChnl.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportProperties.aspx.resx">
+      <DependentUpon>ReportProperties.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportView.aspx.resx">
+      <DependentUpon>ReportView.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportWizard.aspx.resx">
+      <DependentUpon>ReportWizard.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResApproval.aspx.resx">
+      <DependentUpon>ResApproval.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResumeMast.aspx.resx">
+      <DependentUpon>ResumeMast.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResumeSearch.aspx.resx">
+      <DependentUpon>ResumeSearch.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResumeSearchResult.aspx.resx">
+      <DependentUpon>ResumeSearchResult.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResumeStatus.aspx.resx">
+      <DependentUpon>ResumeStatus.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RunSQL.aspx.resx">
+      <DependentUpon>RunSQL.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RunSQLCommand.aspx.resx">
+      <DependentUpon>RunSQLCommand.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search.aspx.resx">
+      <DependentUpon>Search.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionMast.aspx.resx">
+      <DependentUpon>SectionMast.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShiftAllocation.aspx.resx">
+      <DependentUpon>ShiftAllocation.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShiftMast.aspx.resx">
+      <DependentUpon>ShiftMast.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SKillMast.aspx.resx">
+      <DependentUpon>SKillMast.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StateMast.aspx.resx">
+      <DependentUpon>StateMast.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestEntry.aspx.resx">
+      <DependentUpon>TestEntry.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestForm.aspx.resx">
+      <DependentUpon>TestForm.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestMast.aspx.resx">
+      <DependentUpon>TestMast.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainCalExplorer.aspx.resx">
+      <DependentUpon>TrainCalExplorer.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainEmpFeedback.aspx.resx">
+      <DependentUpon>TrainEmpFeedback.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainerMast.aspx.resx">
+      <DependentUpon>TrainerMast.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainingCalender.aspx.resx">
+      <DependentUpon>TrainingCalender.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainingMast.aspx.resx">
+      <DependentUpon>TrainingMast.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainingNeeds.aspx.resx">
+      <DependentUpon>TrainingNeeds.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainingRequest.aspx.resx">
+      <DependentUpon>TrainingRequest.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreeMenu.aspx.resx">
+      <DependentUpon>TreeMenu.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrfUtility.aspx.resx">
+      <DependentUpon>TrfUtility.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateMngrs.aspx.resx">
+      <DependentUpon>UpdateMngrs.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UploadImage.aspx.resx">
+      <DependentUpon>UploadImage.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebForm1.aspx.resx">
+      <DependentUpon>WebForm1.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebForm11.aspx.resx">
+      <DependentUpon>WebForm11.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebForm2.aspx.resx">
+      <DependentUpon>WebForm2.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebForm5.aspx.resx">
+      <DependentUpon>WebForm5.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkHistEntry.aspx.resx">
+      <DependentUpon>WorkHistEntry.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkInProgress.aspx.resx">
+      <DependentUpon>WorkInProgress.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{CF845C55-C321-4742-B673-E6212D061ED9}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51604</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

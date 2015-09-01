@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="eHRMS_ravi">
+</Property><Property Name="Solution File" Value="F:\HRMS\eHRMS_ravi.sln">
+</Property><Property Name="Date" Value="20 February 2012">
+</Property><Property Name="Time" Value="AM 00:33:14">
+</Property><Property Name="Log Number" Value="2">
+</Property></Properties><Event ErrorLevel="2" Project="http://jaguar:/eHRMS.Net/eHRMS.Net.vbproj" Source="http://jaguar:/eHRMS.Net/eHRMS.Net.vbproj" Description="Could not find the server 'http://jaguar:' on the local machine. Creating a virtual directory is only supported on the local IIS server.">
+</Event></UpgradeLog>

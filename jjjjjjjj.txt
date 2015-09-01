@@ -1,0 +1,29 @@
+--update mstReports set RptQuery='
+SELECT  HRDMASTQRY.EMP_CODE as Code,Emp_Name as [Name], fathHusbName as [Father/Husb. Name],DOJ as [Date Of Join],DOB as [Date Of Birth],
+DOL as [Date Of Leaving],DOC as [Date Of Confirmation],  HRDMASTQRY.DSG_NAME as Designation,  HRDMASTQRY.DEPT_NAME as Department, HRDMASTQRY.PROC_Name as [Sub Department],
+MNGR_NAME as [Reporting To],(MADDR1 + MADDR2 + MADDR3) as Address, case sex when 1  then 'Male' Else 'Female' end as Sex,MPHONE as Phone,
+PPHONE as Mobile, EMAILID as [Email Id], round((isnull(sum(HrdExp.Exp_Years),0)+cast(datediff(DD,HrdMastQry.DOJ,  GetDate()) as float)/365),2) as Exp_Years, 
+dbo.EMPQUAL(HRDMASTQRY.EMP_CODE) as Qualification,  BANK_NAME as [Bank Name],    BANKACNO as [ACC No],HRDMASTQRY.LOC_NAME as Location, 
+PayMast.CTC as [Gross Salary], EL_ENCASH AS [Fixed Salary],CL_ENCASH AS [Variable Salary], INCERN AS [Sales Incentive], passportno as [Passport No],
+PANNO as [PAN No.],  bloodgrp as [Blood Group], DOV as [Valid Upto],REGN_NAME as Region,HRDMASTQRY.Type_Name as EmpType, HRDMASTQRY.JobProfile as JobProfile 
+FROM HRDMASTQRY  
+Left join PayMast On HRDMASTQRY.Emp_Code=PayMast.Emp_Code  
+left join HrdExp On HRDMASTQRY.Emp_Code=HrdExp.Emp_Code 
+Group By   PayMast.CTC, PayMast.INCERN, PayMast.EL_ENCASH, PayMast.CL_ENCASH, HRDMASTQRY.Emp_code,Emp_Name,dob,doj,dol,doc,HRDMASTQRY.dsg_name,panno,HRDMASTQRY.PROC_Name, bloodgrp,HRDMASTQRY.dept_name, 
+mngr_name,maddr1,  maddr2,maddr3,sex,Mphone,emailid,bank_name,bankacno,pfno,  HRDMASTQRY.loc_name,passportno,dov,regn_name,HRDMASTQRY.type_name, HRDMASTQRY.jobprofile,fathHusbName,PPHONE 
+Order By HRDMASTQRY.Emp_Name
+
+Left join workhistory On HRDMASTQRY.Emp_Code=workhistory.Emp_Code 
+
+if 
+(workhistory.empStatus='Salary Changed' or workhistory.empStatus='Promotion with Salary Changed' or workhistory.empStatus = 'Redesignation With Salary Change' or
+workhistory.empStatus='New Hire')
+BEGIN
+workhistory.Todate + 1 as [Last Date of Increment] 
+END
+
+select max(todate) as lastdate from workhistory  where empStatus='Salary Changed' or empStatus='Promotion with Salary Changed' 
+or empStatus = 'Redesignation With Salary Change' or empStatus='New Hire'
+group by emp_Code
+
+select * from workhistory

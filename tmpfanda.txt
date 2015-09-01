@@ -1,0 +1,642 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+	<HEAD>
+		<title>WorkHistEntry</title>
+		<meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+		<meta content="Visual Basic .NET 7.1" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<LINK href="HCStyles.css" type="text/css" rel="stylesheet">
+		<script language="vbscript">
+			Sub CalMonths()
+				document.getElementById("TxtMonths").value = datediff("M", cdate(document.getElementById("DtpEffectiveTxt").value) ,cdate(document.getElementById("dtpToTxt").value))
+			End Sub
+		</script>
+	</HEAD>
+	<body MS_POSITIONING="GridLayout" bottomMargin="0" leftMargin="0" topMargin="0" rightMargin="0">
+		<form name="Form1" method="post" action="WorkHistEntry.aspx" id="Form1">
+
+		<script language="jscript" src="coolmenus4.js"></script>
+		 <Script languages=javascript > 
+ oCMenu=new makeCM("oCMenu");
+ oCMenu.pxBetween = 0
+ oCMenu.fromLeft = 0
+ oCMenu.fromTop = 0
+ oCMenu.rows = 1
+ oCMenu.menuPlacement = "Left"
+ oCMenu.offlineRoot = ""
+ oCMenu.onlineRoot = ""
+ oCMenu.resizeCheck = 1
+ oCMenu.wait = 100
+ oCMenu.fillImg = "cm_fill.gif"
+ oCMenu.zIndex = 0
+ oCMenu.level[0]=new cm_makeLevel()
+ oCMenu.level[0].width=100
+ oCMenu.level[0].height=20
+ oCMenu.level[0].regClass="clLevel0"
+ oCMenu.level[0].overClass="clLevel0over"
+ oCMenu.level[0].borderX=0
+ oCMenu.level[0].borderY=0
+ oCMenu.level[0].borderClass="clLevel0border"
+ oCMenu.level[0].offsetX=0
+ oCMenu.level[0].offsetY=0
+ oCMenu.level[0].rows=0
+ oCMenu.level[0].arrow=0
+ oCMenu.level[0].arrowWidth=0
+ oCMenu.level[0].arrowHeight=0
+ oCMenu.level[0].align="bottom"
+ oCMenu.level[1]=new cm_makeLevel()
+ oCMenu.level[1].width=oCMenu.level[0].width-2
+ oCMenu.level[1].height=19
+ oCMenu.level[1].regClass="clLevel1"
+ oCMenu.level[1].overClass="clLevel1over"
+ oCMenu.level[1].borderX=0
+ oCMenu.level[1].borderY=1
+ oCMenu.level[1].align="right"
+ oCMenu.level[1].offsetX=-(oCMenu.level[0].width-2)/2+20
+ oCMenu.level[1].offsetY=0
+ oCMenu.level[1].borderClass="clLevel1border"
+ oCMenu.makeMenu('top1','','Employee','','','120','22')
+ oCMenu.makeMenu('top2','','Leaves','','','120','22')
+ oCMenu.makeMenu('top3','','Training','','','120','22')
+ oCMenu.makeMenu('top4','','Recruitment','','','120','22')
+ oCMenu.makeMenu('top5','','Masters','','','120','22')
+ oCMenu.makeMenu('top6','','Reports','','','120','22')
+ oCMenu.makeMenu('top7','','Logout','','','120','22')
+oCMenu.construct()
+</Script>
+			<TABLE cellSpacing="0" cellPadding="0" width="780" border="0">
+				<tr>
+					<TD noWrap align="right" width="10" height="19"><IMG class="SetImageFace" src="Images/TableLeft.gif">
+					</TD>
+					<TD class="headingCont" style="FONT-SIZE: 18px" noWrap align="left" width="5%" background="Images/TableMid.gif"
+						height="19">&nbsp;</TD>
+					<TD class="headingCont" style="FONT-SIZE: 18px" noWrap align="left" background="Images/TableMid.gif"
+						height="19">Employee Work History ....
+					</TD>
+					<TD noWrap align="right" width="10" height="19"><IMG class="SetImageFace" src="Images/TableRight.gif">
+					</TD>
+				</tr>
+			</TABLE>
+			<table cellSpacing="0" cellPadding="0" width="780" border="1" frame="box" rules="none">
+				<tr>
+					<td width="15%"></td>
+					<td width="35%"></td>
+					<td width="15%"></td>
+					<td width="35%"></td>
+				</tr>
+				<tr>
+					<td width="15%" colSpan="4"></td>
+				</tr>
+				<tr>
+					<td>Employee Code</td>
+					<td><input name="TxtCode" type="text" onchange="__doPostBack('TxtCode','')" language="javascript" id="TxtCode" class="TextBox" style="width:75px;" /><input type="image" name="btnList" id="btnList" src="Images\Find.gif" align="AbsMiddle" border="0" style="height:19px;width:18px;" /></td>
+					<td colspan="2">
+						</td>
+				</tr>
+				<tr>
+					<td style="HEIGHT: 15px">Department</td>
+					<td style="HEIGHT: 15px"><select name="cmbDept" id="cmbDept" style="width:250px;">
+	<option value="306 ">A.P. - Region</option>
+	<option value="31200">ACCOUNTS</option>
+	<option value="0001">ACCOUNTS</option>
+	<option value="32720">AGRO</option>
+	<option value="402">Agro</option>
+	<option value="0002">AGRO - MOH</option>
+	<option value="0003">AGRO - PROCUREMENT</option>
+	<option value="0004">AGRO - R &amp; D</option>
+	<option value="700">ASIA-Pacific Region</option>
+	<option value="32000">BLENDING</option>
+	<option value="0005">BLENDING</option>
+	<option value="500">Co.Pack</option>
+	<option value="32300">DESPATCH</option>
+	<option value="0006">DESPATCH</option>
+	<option value="0007">ENGINEERING</option>
+	<option value="31900">ENGINEERING</option>
+	<option value="0014">FARIDABAD</option>
+	<option value="205">Finance</option>
+	<option value="800 ">Global</option>
+	<option value="200">H.R.</option>
+	<option value="209 ">H.R. (Western)</option>
+	<option value="0901">hghfh</option>
+	<option value="204">Logistics</option>
+	<option value="210">M.I.S.</option>
+	<option value="201">Marketing                 </option>
+	<option value="206">MD's Office</option>
+	<option value="207">Operations</option>
+	<option value="00000">OPERATIVE</option>
+	<option value="0008">PERSONNEL</option>
+	<option value="31500">PERSONNEL</option>
+	<option value="32710">PROCUREMENT</option>
+	<option value="0009">PRODUCTION - DIRECT</option>
+	<option value="0017">PRODUCTION - INDIRECT</option>
+	<option value="31800">PRODUCTION-INDIRECT</option>
+	<option value="600">Pune</option>
+	<option value="31300">PURCHASE</option>
+	<option value="202">Purchase</option>
+	<option value="0010">PURCHASE</option>
+	<option value="0011">QUALITY CONTROL</option>
+	<option value="32100">QUALITY CONTROL</option>
+	<option value="400">R &amp; D</option>
+	<option value="0012">R &amp; D</option>
+	<option value="203">Sales -  H.O.</option>
+	<option value="302">Sales - Central</option>
+	<option value="303">Sales - East</option>
+	<option value="301">Sales - North</option>
+	<option value="305">Sales - South</option>
+	<option value="304">Sales - West</option>
+	<option value="401 ">Seasoning</option>
+	<option value="32200">STORES</option>
+	<option value="0013">STORES</option>
+	<option value="0015">SUPERVISOR TRAINEE</option>
+	<option value="0019">Testing</option>
+	<option value="0018">TPM</option>
+	<option value="32101">TPM</option>
+	<option value="900">West Bengal</option>
+	<option value="0016">WORKMEN TRAINEE</option>
+	<option selected="selected" value=""></option>
+
+</select></td>
+					<td style="HEIGHT: 15px">Designation</td>
+					<td style="HEIGHT: 15px"><select name="cmbDesg" id="cmbDesg" style="width:250px;">
+	<option value="AMS">Agro Manager - South</option>
+	<option value="AGM">Agronomy Manager</option>
+	<option value="AAM">AREA AGRO MANAGER</option>
+	<option value="AH">Area Head Sales</option>
+	<option value="ASM">Area Sales Manager</option>
+	<option value="AM">Assistant Manager</option>
+	<option value="AOFF">ASSISTANT OFFICER</option>
+	<option value="ATEC">ASSISTANT TECHNICIAN</option>
+	<option value="ASOF">Assitant Officer</option>
+	<option value="ACMW">Asst. Commercial Man ager - West</option>
+	<option value="ACMC">Asst. Commercial Manager - Central</option>
+	<option value="ACME">Asst. Commercial Manager - East</option>
+	<option value="AMA">Asst. Manager - Admin.</option>
+	<option value="AMF">Asst. Manager - Finance</option>
+	<option value="AMI">Asst. Manager - IT</option>
+	<option value="AMM">Asst. Manager - Marketing</option>
+	<option value="AMSH">Asst. Manager - Sales HR</option>
+	<option value="AMSP">Asst. Manager - Sales Planning</option>
+	<option value="AMSE">Asst. Manager - Seasoning</option>
+	<option value="AMFC">Asst. Manager Finance -Co-Pack</option>
+	<option value="AMR">Asst. Manager R&amp;D</option>
+	<option value="ATCO">ASSTT TECHNICIAN CUM OPERATOR</option>
+	<option value="BM">Brand Manager</option>
+	<option value="BMC">Brand Manager - Cheetos</option>
+	<option value="BML">Brand Manager - Lehar</option>
+	<option value="BUGM">BUGM</option>
+	<option value="BPM">Business Planning Manager</option>
+	<option value="BDM">Bussiness Development Manager</option>
+	<option value="CM">Commercial Manager</option>
+	<option value="CMC">Commercial Manager - Channo</option>
+	<option value="CMP">Commercial Manager - Pune</option>
+	<option value="CMK">Commercial Manager Kolkata</option>
+	<option value="COE">Commercial Officer  East</option>
+	<option value="OFS">Commercial Officer  South</option>
+	<option value="CRM">Consumer Research Manager</option>
+	<option value="DPM">Demand Planning Manager</option>
+	<option value="EVP">DIR / EVP                     </option>
+	<option value="VP  ">DIR / VP                      </option>
+	<option value="DIR">Director</option>
+	<option value="ET">Engineer Trainee</option>
+	<option value="EE">Engineering Executive</option>
+	<option value="EM">Engineering Manager</option>
+	<option value="EMC">Engineering Manager - Channo</option>
+	<option value="EMK">Engineering Manager - Kolkata</option>
+	<option value="EMP">Engineering Manager - Pune</option>
+	<option value="EVPML">EVP MARKETING - LAY'S</option>
+	<option value="EVPSN">EVP SALES - NORTH</option>
+	<option value="EXE">Executive                     </option>
+	<option value="EQA">Executive  Quality Assurance</option>
+	<option value="EXF">Executive - Finance</option>
+	<option value="EXH">Executive - HR</option>
+	<option value="EXI">Executive - IT</option>
+	<option value="EP">Executive - Packaging</option>
+	<option value="EXQ">Executive - QA</option>
+	<option value="EXR">Executive - R&amp;D</option>
+	<option value="EXS">Executive - Supply Chain</option>
+	<option value="EXASS">Executive Assistant</option>
+	<option value="ETR">Executive Trainee</option>
+	<option value="0001">FHFDH</option>
+	<option value="FT">FIELD TECHNICIAN</option>
+	<option value="DIRF">FINANCE DIRECTOR</option>
+	<option value="FM">Finance Manager</option>
+	<option value="FAM">Financial Accounting Manager</option>
+	<option value="GM">General Manager</option>
+	<option value="GMI">General Manager - IT</option>
+	<option value="GMHK">General Manager HR - Kolkata</option>
+	<option value="GMHP">General Manager HR - Pune</option>
+	<option value="GMF">GM -  Finance</option>
+	<option value="GMCI">GM - Consumer Insights</option>
+	<option value="GMC">GM - Copack</option>
+	<option value="GMK">GM - Key Accounts</option>
+	<option value="GMOD">GM - Operations Development</option>
+	<option value="GMOC">GM - Org. Capability</option>
+	<option value="GMSF">GM - Sales Finance</option>
+	<option value="GMSI">GM - Sales Information &amp; Systems</option>
+	<option value="GMAE">GM Agro - East</option>
+	<option value="GMAW">GM Agro - West &amp; South</option>
+	<option value="GMMC">GM Manufacturing - Channo</option>
+	<option value="GMMK">GM Manufacturing - Kolkata</option>
+	<option value="GMMP">GM Manufacturing - Pune</option>
+	<option value="GMKU">GM Marketing - Kurkure</option>
+	<option value="GMML">GM Marketing - Lay's</option>
+	<option value="GMP">GM Projects</option>
+	<option value="GMSCE">GM Sales - Central</option>
+	<option value="GMSE">GM Sales - East</option>
+	<option value="GMSC">GM Supply Chain</option>
+	<option value="GMTS">GM Technology - Indian Snacks</option>
+	<option value="GMTI">GM Technology - Innovations</option>
+	<option value="GET">Graduate Engg. Trainee</option>
+	<option value="HPD">Head Packaging Dev.</option>
+	<option value="HS">Head Sales North</option>
+	<option value="HSK">HIGHLY SKILLED</option>
+	<option value="HSW">HIGHLY SKILLED WORKER</option>
+	<option value="DIRH">HR DIRECTOR</option>
+	<option value="ITM">IT Manager</option>
+	<option value="KAM">Key Accounts Manager</option>
+	<option value="ML">Legal Manager</option>
+	<option value="LS">LINE SUPERVISOR</option>
+	<option value="MENG">MAINTENANCE ENGINEER</option>
+	<option value="MGR">Manager                       </option>
+	<option value="MHR">Manager - HR Administration</option>
+	<option value="MD  ">Managing Director</option>
+	<option value="MM">Manufacturing Manager</option>
+	<option value="mdm">Market Development Manager</option>
+	<option value="MDE">Marketing Dev. Executive</option>
+	<option value="DIRM">MARKETING DIRECTOR</option>
+	<option value="EXM">Marketing Executive</option>
+	<option value="MMN">Marketing Manager - NBD</option>
+	<option value="OA">OFFICE ASSISTANT</option>
+	<option value="OFF">Officer</option>
+	<option value="OS">Officer  Stores</option>
+	<option value="OF">Officer - Finance</option>
+	<option value="OQC">Officer - Quality Control</option>
+	<option value="ORD">Officer R&amp;D</option>
+	<option value="DIRO">OPERATIONS DIRECTOR</option>
+	<option value="OPR">OPERATIVE</option>
+	<option value="OPT">OPERATIVE TRAINEE</option>
+	<option value="OCT">OPERATOR CUM TECHNICIAN</option>
+	<option value="PDM">Packaging Development Manager</option>
+	<option value="PLM">Planning Manager</option>
+	<option value="PENG">PLANT ENGINEER</option>
+	<option value="HRMC">Plant HR Manager - Channo</option>
+	<option value="PME">Project Manager - Expansions</option>
+	<option value="PMO">Purchase Manager - Oil &amp; Imports</option>
+	<option value="PMP">Purchase Manager - PM</option>
+	<option value="PMR">Purchase Manager - RM</option>
+	<option value="QAM">Quality Assurance Managar</option>
+	<option value="QAMK">Quality Assurance Managar - Kolkata</option>
+	<option value="QAMP">Quality Assurance Managar - Pune</option>
+	<option value="QAMC">Quality Assurance Manager - Channo</option>
+	<option value="QAO">Quality Assurance Officer</option>
+	<option value="RCM">Region Commercial Manager</option>
+	<option value="RSM">Regional Sales Manager</option>
+	<option value="RSMS">Regional Sales Manager - South</option>
+	<option value="DIRS">SALES DIRECTOR</option>
+	<option value="SE">Sales Executive                     </option>
+	<option value="SFM">Sales Finance Manager</option>
+	<option value="SM">Sales Manager</option>
+	<option value="SMD">Sales Manager - Delhi</option>
+	<option value="SMK">Sales Manager - Kolkata</option>
+	<option value="SMP">Sales Manager - Projects</option>
+	<option value="SMPU">Sales Manager - Punjab</option>
+	<option value="SMR">Sales Manager - Rajasthan</option>
+	<option value="SO">Sales Officer</option>
+	<option value="ST">Sales Trainee</option>
+	<option value="STEW">Sales Training Executive - West</option>
+	<option value="STM">Sales Training Manager</option>
+	<option value="STO">Sales Training Officer</option>
+	<option value="SDM">Seasoning Development Manager</option>
+	<option value="SS">SEMI SKILLED</option>
+	<option value="SSW">SEMISKILLED WORKER</option>
+	<option value="SCO">Senior Commercial Officer </option>
+	<option value="SCOC">Senior Commercial Officer Central </option>
+	<option value="SCOW">Senior Commercial Officer West</option>
+	<option value="S.EX">SENIOR EXECUTIVE</option>
+	<option value="S.OF">SENIOR OFFICER</option>
+	<option value="SRO">Senior Officer</option>
+	<option value="SOF">Senior Officer - Finance</option>
+	<option value="SOIT">Senior Officer - IT</option>
+	<option value="SOP">Senior Officer - Production</option>
+	<option value="SOQ">Senior Officer - Quality Assurance</option>
+	<option value="SSO">Senior Sales Officer</option>
+	<option value="SSTO">Senior Sales Training Officer </option>
+	<option value="SK">SKILLED</option>
+	<option value="SW">SKILLED WORKER</option>
+	<option value="SAO">Sr. Area Agro Officer </option>
+	<option value="SOM">Sr. Officer - Maintenance</option>
+	<option value="SCM">Supply Chain Manager</option>
+	<option value="TECH">TECHNICIAN</option>
+	<option value="TCO">TECHNICIAN CUM OPERATOR</option>
+	<option value="TCUO">TECHNICIAN CUM UTILITY OPERATO</option>
+	<option value="DIRT">TECHNOLOGY DIRECTOR</option>
+	<option value="TMM">Trade Marketing Manager</option>
+	<option value="TRN">Trainee</option>
+	<option value="TCM">Training &amp; Change Manager</option>
+	<option value="US">UNSKILLED</option>
+	<option value="USW">UNSKILLED WORKER</option>
+	<option value="VIC">Vice President</option>
+	<option value="VPP">Vice President - Purchase</option>
+	<option value="VPA">VP - Agro</option>
+	<option value="VPB">VP - Business Planning</option>
+	<option value="VPF">VP - Financial Controls</option>
+	<option value="VPSO">VP - Sales &amp; Ops HR</option>
+	<option value="VPSD">VP - Sales Development</option>
+	<option value="VPMS">VP Marketing - Indian Snacks</option>
+	<option value="VPMN">VP Marketing - New Business Development</option>
+	<option value="VPMW">VP Marketing - Western Snacks</option>
+	<option value="VPOC">VP Plant Operations - Channo</option>
+	<option value="VPOK">VP Plant Operations - Kolkata</option>
+	<option value="VPOP">VP Plant Operations - Pune</option>
+	<option value="VPSN">VP Sales - North</option>
+	<option value="VPSS">VP Sales - South &amp; East</option>
+	<option value="VPVP">VP Sales - West</option>
+	<option value="WT">WORKMEN TRAINEE</option>
+	<option selected="selected" value=""></option>
+
+</select></td>
+				</tr>
+				<tr>
+					<td>Division</td>
+					<td><select name="cmbDivi" id="cmbDivi" style="width:250px;">
+	<option value="70">ASIA-PACIFIC REGION           </option>
+	<option value="90">CHANNO</option>
+	<option value="0002">CHIPS</option>
+	<option value="50">FBD-UNIT</option>
+	<option value="20">G&amp;A                           </option>
+	<option value="80  ">GLOBAL                        </option>
+	<option value="0001">KURKURE</option>
+	<option value="110">PR Division</option>
+	<option value="60  ">PUNE                          </option>
+	<option value="40">R&amp;D                           </option>
+	<option value="30">S &amp; D</option>
+	<option value="100">Table</option>
+	<option selected="selected" value=""></option>
+
+</select></td>
+					<td>Section</td>
+					<td><select name="cmbSect" id="cmbSect" style="width:250px;">
+	<option value="41  ">BANGALORE                     </option>
+	<option value="32  ">BHIWANDI                      </option>
+	<option value="15  ">BHOPAL                        </option>
+	<option value="54  ">BIHAR                         </option>
+	<option value="31  ">BOMBAY                        </option>
+	<option value="51  ">CALCUTTA                      </option>
+	<option value="23  ">CHANDIGARH                    </option>
+	<option value="02  ">CHANNO                        </option>
+	<option value="CONC">CONCENTRATE</option>
+	<option value="11  ">DELHI                         </option>
+	<option value="14  ">GHAZIABAD                     </option>
+	<option value="34  ">GOA                           </option>
+	<option value="33  ">GUJRAT                        </option>
+	<option value="53  ">GUWAHATI                      </option>
+	<option value="25  ">H.P                           </option>
+	<option value="22  ">HARYANA                       </option>
+	<option value="01  ">HEAD OFFICE                   </option>
+	<option value="44  ">HYDERABAD                     </option>
+	<option value="24  ">J&amp;K                           </option>
+	<option value="12  ">KANPUR                        </option>
+	<option value="45  ">KERALA                        </option>
+	<option value="42  ">MADRAS                        </option>
+	<option value="35  ">NAGPUR                        </option>
+	<option value="55  ">ORISSA                        </option>
+	<option value="04  ">PUNE                          </option>
+	<option value="21  ">PUNJAB                        </option>
+	<option value="13  ">RAJASTHAN                     </option>
+	<option value="20  ">RSO-CENTRAL(UP/RAJ)           </option>
+	<option value="50  ">RSO-EAST                      </option>
+	<option value="10  ">RSO-NORTH                     </option>
+	<option value="40  ">RSO-SOUTH                     </option>
+	<option value="30  ">RSO-WEST                      </option>
+	<option value="52  ">SILIGURI                      </option>
+	<option value="S">SUPERVISOR</option>
+	<option value="03  ">TRADITIONAL                   </option>
+	<option value="43  ">TRICHY                        </option>
+	<option value="27  ">UTTARANCHAL                   </option>
+	<option value="W">WORKMEN</option>
+	<option selected="selected" value=""></option>
+
+</select></td>
+				</tr>
+				<tr>
+					<td>Category</td>
+					<td><select name="cmbCate" id="cmbCate" style="width:250px;">
+	<option value="FLE">FRONT LINE EMPLOYEE</option>
+	<option value="FLS">FRONT LINE SUPERVISOR</option>
+	<option value="001">MAIN OFFICE EMPLOYEE</option>
+	<option value="OTH">OTHER</option>
+	<option selected="selected" value=""></option>
+
+</select></td>
+					<td>Responsibility</td>
+					<td><select name="cmbResp" id="cmbResp" style="width:250px;">
+	<option value="20"> RSO-Central</option>
+	<option value="50"> RSO-East</option>
+	<option value="10"> RSO-North</option>
+	<option value="40"> RSO-South</option>
+	<option value="30"> RSO-West</option>
+	<option value="41">Bangalore</option>
+	<option value="32">Bhiwandi</option>
+	<option value="15">Bhopal</option>
+	<option value="54">Bihar</option>
+	<option value="23">Chandigarh</option>
+	<option value="02">Channo</option>
+	<option value="42">Chennai</option>
+	<option value="11">Delhi</option>
+	<option value="03">Faridabad</option>
+	<option value="14">Ghaziabad</option>
+	<option value="34">Goa</option>
+	<option value="33">Gujarat</option>
+	<option value="53">Guwahati</option>
+	<option value="25">H.P.</option>
+	<option value="22">Haryana</option>
+	<option value="01">Head Office</option>
+	<option value="44">Hyderabad</option>
+	<option value="24">J&amp;K</option>
+	<option value="57">Jharkhand</option>
+	<option value="12">Kanpur</option>
+	<option value="45">Kerala</option>
+	<option value="51">Kolkatta</option>
+	<option value="31">Mumbai</option>
+	<option value="35">Nagpur</option>
+	<option value="55">Orissa</option>
+	<option value="04">Pune</option>
+	<option value="21">Punjab</option>
+	<option value="13">Rajasthan</option>
+	<option value="56">Rourkela</option>
+	<option value="52">Siliguri</option>
+	<option value="S">SUPERVISOR</option>
+	<option value="43">Trichi</option>
+	<option value="27">Uttaranchal</option>
+	<option value="05">West Benagal</option>
+	<option value="W">WORKMEN</option>
+	<option selected="selected" value=""></option>
+
+</select></td>
+				</tr>
+				<tr>
+					<td>Band</td>
+					<td><select name="cmbBand" id="cmbBand" style="width:250px;">
+	<option value="B1">B-1</option>
+	<option value="B2">B-2</option>
+	<option value="B3  ">B-3</option>
+	<option value="BA">Band - A</option>
+	<option value="BB">Band - B</option>
+	<option value="BC">Band - C</option>
+	<option value="BD">Band - D</option>
+	<option value="BE">Band - E </option>
+	<option value="BF">Band - F</option>
+	<option value="BG">Band - G</option>
+	<option value="BH">Band - H</option>
+	<option value="B-D">Band-D</option>
+	<option value="B-E">Band-E</option>
+	<option value="B-F">Band-F</option>
+	<option value="B-G">Band-G</option>
+	<option value="B-H">Band-H</option>
+	<option value="L1">L1</option>
+	<option value="L2">L2</option>
+	<option value="L3">L3</option>
+	<option value="L4">L4</option>
+	<option value="LS">LS</option>
+	<option value="MR1">MR1</option>
+	<option value="MR2">MR2</option>
+	<option value="MR3">MR3</option>
+	<option value="MR4">MR4</option>
+	<option value="MR5">MR5</option>
+	<option value="MR6">MR6</option>
+	<option value="ST">SUPERVISOR TRAINEE</option>
+	<option value="WT">WORKMEN TRAINEE</option>
+	<option selected="selected" value=""></option>
+
+</select></td>
+					<td>Pay Bucket</td>
+					<td><select name="cmbPayBuck" id="cmbPayBuck" style="width:250px;">
+	<option value="CHQ">Cheque Payment</option>
+	<option value="CITI">CITIBANK Transfer</option>
+	<option value="DD">Demand Draft</option>
+	<option value="DDS">Demand Draft (SBS)</option>
+	<option value="HDF">HDFC Bank Transfer</option>
+	<option selected="selected" value=""></option>
+
+</select></td>
+				</tr>
+				<tr>
+					<td>Hire Date</td>
+					<td><Script Language='VBScript'>
+Sub CheckDtpHire()
+Dim TVal
+TVal = document.getElementById("DtpHiretxt").value
+if isdate(TVal) then 
+If Len(TVal) = 11 Then
+If Not ((Mid(TVal, 3, 1) = "/" Or Mid(TVal, 3, 1) = "-") And (Mid(TVal, 7, 1) = "/" Or Mid(TVal, 7, 1) = "-")) Then
+MsgBox "Invalid Format! Please Enter in [dd/MMM/yyyy] Format." 
+End If
+Else
+MsgBox "Invalid Format! Please Enter in [dd/MMM/yyyy] Format.", , "Divergent" 
+End If
+Else
+MsgBox "Invalid Date!", vbokOnly, "Divergent"
+document.getElementById("DtpHiretxt").value = Right("00" & Day(Now()),2) & "/" & MonthName(Month(Now()),true) & "/" & Year(Now())
+End if
+End Sub
+</Script>
+<span id="DtpHire"><input name="DtpHiretxt" type="text" value="06/Oct/2005" id="DtpHiretxt" title="Enter Date in [dd/MMM/yyyy] Format." onBlur="CheckDtpHire()" style="width:105px;" /><input type="image" name="DtpHireimg" id="DtpHireimg" title="Click To Display Calndar." src="Images\Up.GIF" alt=">>" align="AbsMiddle" border="0" style="height:20px;width:20px;" /><BR></span></td>
+					<td>Effective Date</td>
+					<td><Script Language='VBScript'>
+Sub CheckDtpEffective()
+Dim TVal
+TVal = document.getElementById("DtpEffectivetxt").value
+if isdate(TVal) then 
+If Len(TVal) = 11 Then
+If Not ((Mid(TVal, 3, 1) = "/" Or Mid(TVal, 3, 1) = "-") And (Mid(TVal, 7, 1) = "/" Or Mid(TVal, 7, 1) = "-")) Then
+MsgBox "Invalid Format! Please Enter in [dd/MMM/yyyy] Format." 
+End If
+Else
+MsgBox "Invalid Format! Please Enter in [dd/MMM/yyyy] Format.", , "Divergent" 
+End If
+Else
+MsgBox "Invalid Date!", vbokOnly, "Divergent"
+document.getElementById("DtpEffectivetxt").value = Right("00" & Day(Now()),2) & "/" & MonthName(Month(Now()),true) & "/" & Year(Now())
+End if
+End Sub
+</Script>
+<span id="DtpEffective"><input name="DtpEffectivetxt" type="text" value="06/Oct/2005" id="DtpEffectivetxt" title="Enter Date in [dd/MMM/yyyy] Format." onBlur="CheckDtpEffective()" style="width:105px;" /><input type="image" name="DtpEffectiveimg" id="DtpEffectiveimg" title="Click To Display Calndar." src="Images\Up.GIF" alt=">>" align="AbsMiddle" border="0" style="height:20px;width:20px;" /><BR></span></td>
+				</tr>
+				<tr>
+					<td>to Date</td>
+					<td><Script Language='VBScript'>
+Sub CheckdtpTo()
+Dim TVal
+TVal = document.getElementById("dtpTotxt").value
+if isdate(TVal) then 
+If Len(TVal) = 11 Then
+If Not ((Mid(TVal, 3, 1) = "/" Or Mid(TVal, 3, 1) = "-") And (Mid(TVal, 7, 1) = "/" Or Mid(TVal, 7, 1) = "-")) Then
+MsgBox "Invalid Format! Please Enter in [dd/MMM/yyyy] Format." 
+End If
+Else
+MsgBox "Invalid Format! Please Enter in [dd/MMM/yyyy] Format.", , "Divergent" 
+End If
+Else
+MsgBox "Invalid Date!", vbokOnly, "Divergent"
+document.getElementById("dtpTotxt").value = Right("00" & Day(Now()),2) & "/" & MonthName(Month(Now()),true) & "/" & Year(Now())
+End if
+End Sub
+</Script>
+<span id="dtpTo"><input name="dtpTotxt" type="text" value="06/Oct/2005" id="dtpTotxt" title="Enter Date in [dd/MMM/yyyy] Format." onBlur="CheckdtpTo()" style="width:105px;" /><input type="image" name="dtpToimg" id="dtpToimg" title="Click To Display Calndar." src="Images\Up.GIF" alt=">>" align="AbsMiddle" border="0" style="height:20px;width:20px;" /><BR></span></td>
+					<td>Tot Months</td>
+					<td><input name="TxtMonths" id="TxtMonths" type="text" class="TextBox" onblur="CalMonths()" onchange="CalMonths()" /></td>
+				</tr>
+				<tr>
+					<td>Annual Salary</td>
+					<td><input name="TxtASalary" type="text" id="TxtASalary" class="TextBox" /></td>
+					<td>Annual %</td>
+					<td><input name="TxtPAnnual" type="text" id="TxtPAnnual" class="TextBox" /></td>
+				</tr>
+				<tr>
+					<td>Merit %</td>
+					<td><input name="TxtPMerit" type="text" id="TxtPMerit" class="TextBox" /></td>
+					<td>Equity %</td>
+					<td><input name="TxtPEquity" type="text" id="TxtPEquity" class="TextBox" /></td>
+				</tr>
+				<tr>
+					<td>Promotion %</td>
+					<td><input name="TxtPPromo" type="text" id="TxtPPromo" class="TextBox" /></td>
+					<td>Band %</td>
+					<td><input name="TxtPBand" type="text" id="TxtPBand" class="TextBox" /></td>
+				</tr>
+				<tr>
+					<td>Performance</td>
+					<td><input name="TxtPerformance" type="text" id="TxtPerformance" class="TextBox" /></td>
+					<td>Status</td>
+					<td><select name="cmbStatus" id="cmbStatus" style="width:160px;">
+	<option selected="selected" value="New Hire">New Hire</option>
+	<option value="Voluntary Retirement">Voluntary Retirement</option>
+	<option value="Company Transfer">Company Transfer</option>
+	<option value="Transfer">Transfer</option>
+	<option value="Deputation">Deputation</option>
+	<option value="Involuntary Retirement">Involuntary Retirement</option>
+	<option value="Voluntary Seperation">Voluntary Seperation</option>
+	<option value="Termination/Death">Termination/Death</option>
+	<option value="Promotion">Promotion</option>
+	<option value="Confirmation">Confirmation</option>
+	<option value="Short Term Injury">Short Term Injury</option>
+	<option value="Long Term Injury">Long Term Injury</option>
+	<option value="Salary Imported">Salary Imported</option>
+	<option value="Salary Changed">Salary Changed</option>
+
+</select></td>
+				</tr>
+				<tr>
+					<td>Remarks</td>
+					<td colSpan="3"><input name="TxtRemarks" type="text" id="TxtRemarks" class="TextBox" style="width:100%;" /></td>
+				</tr>
+				<tr>
+					<td align="right" colspan="4"><input type="submit" name="cmdSave" value="Save" id="cmdSave" style="width:75px;" />&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="submit" name="cmnClose" value="Close" id="cmnClose" style="width:75px;" /></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</HTML>
